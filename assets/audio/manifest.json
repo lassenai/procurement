@@ -1,0 +1,434 @@
+{
+  "T1-02": {
+    "hash": "8238f15ae0002f2091fc6b67824e981464e7a5e234cd892408bcbe236be78fa5",
+    "src": "assets/audio/T1-02-8238f15ae000.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T1-01": {
+    "hash": "49e83bbbff69a9788b7f62153bdeb28e1f93cf82c49a17a00733d288bcebb99e",
+    "src": "assets/audio/T1-01-49e83bbbff69.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T1-03": {
+    "hash": "6aacdedf0471b6b10291e5bf522b5dac8f65b9d442cf2fb8c6d4ad78e1f98f8d",
+    "src": "assets/audio/T1-03-6aacdedf0471.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T1-04": {
+    "hash": "54e3fc27411ba95ee9b6442a07c357eea317d43e30fb05e6b318978ec589bac7",
+    "src": "assets/audio/T1-04-54e3fc27411b.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T1-05": {
+    "hash": "1c46aec968aa50eb2d8d2a6a77df49033a2ad60a1e6812565ba51d5dea87eb2b",
+    "src": "assets/audio/T1-05-1c46aec968aa.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T1-06": {
+    "hash": "13c39e1d471412802705d1c0f8bf06af09f770ea20261f197ddaeee85ce978a1",
+    "src": "assets/audio/T1-06-13c39e1d4714.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T1-07": {
+    "hash": "2efb3e939032404611e852527cb2a49deab74b86ec49b5b0980db0b0f231b12a",
+    "src": "assets/audio/T1-07-2efb3e939032.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T1-08": {
+    "hash": "c3667a0217f0218a8ef10db60b3a53d472a063413c2cd3d7cc44a27a3378783f",
+    "src": "assets/audio/T1-08-c3667a0217f0.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-02": {
+    "hash": "37bda486b8a2fec8aa04736b406b2397236ba74d787880a040043d5f3f5763ff",
+    "src": "assets/audio/T2-02-37bda486b8a2.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-01": {
+    "hash": "2d07d3e92b242e314eb61473c0e4cbc34f47a083830e86c390668089c799c176",
+    "src": "assets/audio/T2-01-2d07d3e92b24.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-03": {
+    "hash": "062c216c0887f7dd7714f763a5959340632be4019b3946b6f1d8f599264593b4",
+    "src": "assets/audio/T2-03-062c216c0887.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-04": {
+    "hash": "5ca5771176f21444a6d83287f1dab19f636a98999319e85415cfa196bb18e01f",
+    "src": "assets/audio/T2-04-5ca5771176f2.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-05": {
+    "hash": "d6e70054ab5feb1137267332010b7318428a6287cb5adda951bc61b3688de4f9",
+    "src": "assets/audio/T2-05-d6e70054ab5f.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-06": {
+    "hash": "1c4df18dff2ea18ee4dae8ebb87e2bfbedd3817684bec55b04196f1f7f5c71d7",
+    "src": "assets/audio/T2-06-1c4df18dff2e.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-07": {
+    "hash": "310576e2e678eb25c93ec91bf70dcf12ac00495913434b6ee92ab4c9b88b9e2b",
+    "src": "assets/audio/T2-07-310576e2e678.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-08": {
+    "hash": "064c8a180621df32e85d3b8343d3af5e6a280552b1a630f68817b9e4b1576454",
+    "src": "assets/audio/T2-08-064c8a180621.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-09": {
+    "hash": "12f9b99c4da0662c694b10aa36f549d1163024bd59164e4bf13681d90d8daf09",
+    "src": "assets/audio/T2-09-12f9b99c4da0.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T2-10": {
+    "hash": "a3dc53e45752ebe6e04f0965a333b51c0f5e096db4629298b5c501a8015f2d1e",
+    "src": "assets/audio/T2-10-a3dc53e45752.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-01": {
+    "hash": "c60bdd0ce1ce55c89c88ad283b3794dee195a991fae3abd2bdee771c1fe4c199",
+    "src": "assets/audio/T3-01-c60bdd0ce1ce.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-02": {
+    "hash": "890458fe61af039f76bd0b90b87ea3d5bafd0fab182c56bee5953a8a282eb60f",
+    "src": "assets/audio/T3-02-890458fe61af.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-03": {
+    "hash": "5a8e939be869d02bb0737f1666dc785dd1c79eedfa90646a532e97ac6aea2cb2",
+    "src": "assets/audio/T3-03-5a8e939be869.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-04": {
+    "hash": "f74c16be6ec1ee510ada4905448c3d065c6f1a629ae6896a20060d4eb05d24d2",
+    "src": "assets/audio/T3-04-f74c16be6ec1.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-05": {
+    "hash": "3b14938bd1573cb30073e2b4f5921745f77be4c71f42144a57030f3ab5d15396",
+    "src": "assets/audio/T3-05-3b14938bd157.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-06": {
+    "hash": "ee7381d61687e8c62f0c9882cd0711689dd5e7fedbfdbd7bad173cbfa9f103db",
+    "src": "assets/audio/T3-06-ee7381d61687.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-07": {
+    "hash": "c969eb6350d355a761ba9bab5ac72a032d90e1e899d407c9932cba6e15e353de",
+    "src": "assets/audio/T3-07-c969eb6350d3.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-08": {
+    "hash": "9c497b5fb455200c18c90d7f24ca5f8c74314959a380ca6b3c2d6620ff872ba7",
+    "src": "assets/audio/T3-08-9c497b5fb455.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-09": {
+    "hash": "fb1285c095a996032b07bf0ec0b9c476ec9d112be3e1e1d7e0ac158ef058fbad",
+    "src": "assets/audio/T3-09-fb1285c095a9.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T3-10": {
+    "hash": "b010500b8ef8911f4adb500665c8fa93ca42e9b99f4a3d3539c867d4a1d2ef5d",
+    "src": "assets/audio/T3-10-b010500b8ef8.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-02": {
+    "hash": "10cd58dc50da13c042a3ffe05eb77983a36e0e9668fb85b99053c41402380d46",
+    "src": "assets/audio/T4-02-10cd58dc50da.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-01": {
+    "hash": "0befb4b26357f11aa70dc3d9bb6482eaed53ac57e131e7747723f4f2da0e6564",
+    "src": "assets/audio/T4-01-0befb4b26357.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-03": {
+    "hash": "496a51550cd8805cd8fa0359246743ecb343f355840eef4749eb165ec13d1d70",
+    "src": "assets/audio/T4-03-496a51550cd8.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-04": {
+    "hash": "030ae8ea8f9f5dfbc422bebe7408164e46d5c2ec97cbd4297915f61165c894d7",
+    "src": "assets/audio/T4-04-030ae8ea8f9f.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-05": {
+    "hash": "380ceec7c9032ab9005d307e821f9de7b68a313877883f2b079af4e44f44d5a7",
+    "src": "assets/audio/T4-05-380ceec7c903.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-06": {
+    "hash": "9e0b331326843e899e3d8f392172ac31bcf90dfcfd83ab7404310d46a14967c7",
+    "src": "assets/audio/T4-06-9e0b33132684.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-07": {
+    "hash": "3096ed851cca51dcd968f838a7d9ebee5f1d8b4106cf287790787b920265f432",
+    "src": "assets/audio/T4-07-3096ed851cca.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-09": {
+    "hash": "c10001cd7c5c8b7cb65cd0d6fc4b1dc9c9e1151a7c88f15c767eff2d7168758e",
+    "src": "assets/audio/T4-09-c10001cd7c5c.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-08": {
+    "hash": "16ba273334904b18130586fd0b93677a78ce1a5b2e19ec4fae534495120d824d",
+    "src": "assets/audio/T4-08-16ba27333490.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-10": {
+    "hash": "480d14c9ee2cffb46cc34511f0525bf5ab393341a3823ef72be0125ab889de46",
+    "src": "assets/audio/T4-10-480d14c9ee2c.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-11": {
+    "hash": "1b567aa20e6ef8d7cd4058d9e4426082e2f37a1470008f43207ae665e18a465d",
+    "src": "assets/audio/T4-11-1b567aa20e6e.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T4-12": {
+    "hash": "c9482588b6d6a54ad6f67f69345bf2339d134b4ec2249360f5fbe89ecf6924ce",
+    "src": "assets/audio/T4-12-c9482588b6d6.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-01": {
+    "hash": "11ae9a1526e3a84d851f62a56a54410c3c57b3cd9d7b6324c263c01e68bd4cee",
+    "src": "assets/audio/T5-01-11ae9a1526e3.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-02": {
+    "hash": "260729943c99c6e81e248d2a407b05343cf8b71f2360fe56b4e370fb8e0d67c1",
+    "src": "assets/audio/T5-02-260729943c99.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-03": {
+    "hash": "d6f003f5119290b6dc28063430e5623a5b70996e197ca5f1bc0105de3bac5418",
+    "src": "assets/audio/T5-03-d6f003f51192.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-04": {
+    "hash": "71c69ab4a606deaf15ecda9fab7f1f120b40466b4ee847cd4eccc0dc57a09f1e",
+    "src": "assets/audio/T5-04-71c69ab4a606.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-05": {
+    "hash": "983e88fc50b40a071deae80ed6249ecb3e93c5dc3a93f99364f9d2e9feadb52a",
+    "src": "assets/audio/T5-05-983e88fc50b4.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-06": {
+    "hash": "50ba250af41a42b984e440785c0ff908841be4d276c57dfb2fc288bd12e35b28",
+    "src": "assets/audio/T5-06-50ba250af41a.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-07": {
+    "hash": "e4933af36b5e9073e5551ea7ec5b633d96469ca16f0ba02052b7c36733625978",
+    "src": "assets/audio/T5-07-e4933af36b5e.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-08": {
+    "hash": "d21d47fe6eb3e2320161f663a1b9f8f33ef6a3bf12719ff094c5803207c16429",
+    "src": "assets/audio/T5-08-d21d47fe6eb3.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-09": {
+    "hash": "1638a759fbb7a661c53b55848b871c43a2576283ff08c159dd7814ed67d29d5c",
+    "src": "assets/audio/T5-09-1638a759fbb7.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T5-10": {
+    "hash": "038346fe5fa466b71aa2809e0f26882da478512bc652bf84483c577dab883674",
+    "src": "assets/audio/T5-10-038346fe5fa4.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T6-01": {
+    "hash": "1eb70852171f5b828b3f2b63a7ca2ff4684755a901265678514c39c724fdad5b",
+    "src": "assets/audio/T6-01-1eb70852171f.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T6-02": {
+    "hash": "c5025fe2d6a085d6b3603b44492f5fc6217078bf230d3e81042c660e17bcac52",
+    "src": "assets/audio/T6-02-c5025fe2d6a0.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T6-03": {
+    "hash": "4447026d6239a6bbf4958de524647bd2d51b8733740e9c6f9c2d018bfdc1cbdd",
+    "src": "assets/audio/T6-03-4447026d6239.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T6-05": {
+    "hash": "306776d991306eb446eec29a7579c166e37f8f700c1dc732130c78d10e99a056",
+    "src": "assets/audio/T6-05-306776d99130.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T6-04": {
+    "hash": "63c6831442e7d1c528357212a7de191cb6730c3dad5cd3ec5098159fcfe27a98",
+    "src": "assets/audio/T6-04-63c6831442e7.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T6-07": {
+    "hash": "b545b3dc7f9b20f082b035913cf09fd47d8102c8b883f25c080a03ca9610b57f",
+    "src": "assets/audio/T6-07-b545b3dc7f9b.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T6-06": {
+    "hash": "c61021d83a3b58625e1f9236de607ec64b90e6615824ce151727ffb49bab9834",
+    "src": "assets/audio/T6-06-c61021d83a3b.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T6-08": {
+    "hash": "417d5b90a7d876470e3183880483257bd8dcf067325257d4561bdbef96617262",
+    "src": "assets/audio/T6-08-417d5b90a7d8.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T7-01": {
+    "hash": "092a028ec60daba445b4036f0a173c6085a7480b8e065a3b8da85c22711d1f9c",
+    "src": "assets/audio/T7-01-092a028ec60d.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T7-02": {
+    "hash": "7eb844dc8c2af7f49c187ef63e02794d22d3318f65f820495ce326b43b9ecfc2",
+    "src": "assets/audio/T7-02-7eb844dc8c2a.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T7-03": {
+    "hash": "81b2eeebcd2368678d805cdda46d5a6860c4f4c88fb40299217d3c49e6690509",
+    "src": "assets/audio/T7-03-81b2eeebcd23.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T7-04": {
+    "hash": "62e3b806723177705afd1154ba1abf4202f308a1548fdf37fc1771a0a4c73ece",
+    "src": "assets/audio/T7-04-62e3b8067231.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T7-05": {
+    "hash": "ab2f2d5361088dc837d5a2928f4d75ebabdd195fc458199f0f6c2b81a969013a",
+    "src": "assets/audio/T7-05-ab2f2d536108.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T7-06": {
+    "hash": "07021d224e3142ec457844b4e63ea023f736e650294dc365ff12fe5621dbcf1e",
+    "src": "assets/audio/T7-06-07021d224e31.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T7-07": {
+    "hash": "90ca23de3fee38806587002f058790824b62471cd4853ad2c0a04a9825a945d8",
+    "src": "assets/audio/T7-07-90ca23de3fee.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T8-01": {
+    "hash": "86ba0df692c62546eb0a5256a717564753ae7e7e25e7599f2352952053e8aa6a",
+    "src": "assets/audio/T8-01-86ba0df692c6.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T8-02": {
+    "hash": "62bc6a4ec34ae602fee6d56d668b79536f79dbbbf3a38b9db3f6e3996288322f",
+    "src": "assets/audio/T8-02-62bc6a4ec34a.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T8-03": {
+    "hash": "b3020bebe9de12732bebe716ff7b5ac49419335ad3f45025586e4ba198bbd147",
+    "src": "assets/audio/T8-03-b3020bebe9de.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T8-04": {
+    "hash": "7e6b62fe8af54fcafdbcfad33807e6f3cef1bd06278bc60700a72e4ea071932e",
+    "src": "assets/audio/T8-04-7e6b62fe8af5.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T8-05": {
+    "hash": "ae645e1d371597033f15bfd5d4dc5fb6a2db5edc69978f3dac166f5cf8a12769",
+    "src": "assets/audio/T8-05-ae645e1d3715.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T8-06": {
+    "hash": "55751f8fb5e115077a6de9d99570db42c96d47755b3f1a3f48c868104dd0cf57",
+    "src": "assets/audio/T8-06-55751f8fb5e1.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  },
+  "T8-07": {
+    "hash": "05fa1a29e10128861995b8732a8aea30bbbeb22f4e51d29baef86751e16f009e",
+    "src": "assets/audio/T8-07-05fa1a29e101.mp3",
+    "voice": "ko-KR-SunHiNeural",
+    "label": "자연스러운 AI 음성 · 선희"
+  }
+}

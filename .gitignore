@@ -1,0 +1,8 @@
+.research/
+.qa/
+__pycache__/
+*.zip
+.playwright-mcp/
+node_modules/
+_site/
+assets/department-logo-original.png

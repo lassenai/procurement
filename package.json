@@ -1,0 +1,16 @@
+{
+  "name": "procurement-study",
+  "version": "0.1.0",
+  "private": true,
+  "description": "공공조달관리사 실기 답안훈련 초안",
+  "scripts": {
+    "test:e2e": "node tests/e2e.cjs",
+    "test:theory": "node tests/theory.cjs",
+    "test:audio": "node tests/natural-audio.cjs",
+    "test:mobile": "node tests/mobile-browsers.cjs",
+    "test:blanks": "node tests/blanks.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
