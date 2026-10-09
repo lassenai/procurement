@@ -47,6 +47,15 @@ def parse_theory():
         lessons=groups[area-1]
         lessons.append(dict(id=f'T{area}-{len(lessons)+1:02}',title=title,paragraphs=body.split('¶'),example=example,answer=answer,pitfall=pitfall,keywords=keywords.split(';'),references=[THEORY_LINKS[key]] if key else []))
     assert [len(g) for g in groups]==THEORY_COUNTS
+    supplements=json.loads((ROOT/'content/theory-supplements.json').read_text(encoding='utf-8'))
+    lesson_ids={lesson['id'] for group in groups for lesson in group}
+    assert set(supplements)<=lesson_ids, 'Unknown supplement lesson'
+    for group in groups:
+        for lesson in group:
+            if lesson['id'] in supplements:
+                supplement=supplements[lesson['id']]
+                assert len(supplement['headers'])==3 and all(len(row)==3 for row in supplement['rows'])
+                lesson['supplement']=supplement
     return groups
 
 

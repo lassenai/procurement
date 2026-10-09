@@ -162,3 +162,12 @@ python tests/check_content.py
 - 시험일정과 공고 링크는 Q넷 2026년 수시검정 제1회 시행공고를 기준으로 확인했습니다(2026-10-09).
 - `assets/docs/qnet-procurement-practical-criteria-2026-2028.pdf`는 Q넷 원본의 실기 부분인 11~18쪽을 내용 변경 없이 발췌했습니다. 적용기간은 2026.03.01~2028.12.31입니다.
 - 원본: https://www.q-net.or.kr/pageLink.do?link=cst/cstReport&jmCd=9777&mcrtrNo=1254
+
+### 핵심이론 세부 정리 (2026-10-09)
+기존 72개 기본 설명과 음성을 유지하고, 영역 1·2의 8개 주제에 접이식 비교표·점검 순서·자체 작성 예제를 추가했습니다. 데이터 원본은 `content/theory-supplements.json`이며 `scripts/build_data.py`로 재생성합니다. 비교표와 보충 예제는 읽기용으로, 기존 이론 듣기 대상에는 포함하지 않습니다.
+- T1-01 등록서류, T1-03 직접생산 비교, T1-05 목록화 사례, T1-06 정보변경·대리인 권한
+- T2-01 수요정보 해석, T2-06 원가계산, T2-07 제조·공사·용역 비교, T2-10 포트폴리오
+- 원가계산 예제의 요율은 명시된 학습용 조건입니다. 확인하지 않은 법정 기한·상한율은 새로 추가하지 않았습니다.
+- 사용자 제공 학습자료는 주제 선정 참고용으로만 사용했으며 PDF 자체를 배포 파일에 포함하지 않습니다. 설명·사례·표를 자체 작성했고 해당 항목에 공식 자료 링크를 표시했습니다.
+- 검증: `python tests/check_content.py`, `node tests/theory.cjs`, `node tests/theory-supplements.cjs`.
+- 2026-10-09 로컬 미리보기 검토 후 사용자가 GitHub 반영을 승인했습니다.
