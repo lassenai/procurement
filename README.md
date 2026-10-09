@@ -97,6 +97,17 @@ python tests/check_content.py
 
 추가 기능 테스트: `node tests/voice.cjs`. 테스트는 가상 인식 이벤트를 사용하므로 음성 서비스의 실제 인식률을 검증하지 않습니다.
 
+### 2026-10-09 음성 중복 수정 및 디자인 시안
+
+- 음성 입력은 한 발화씩 종료하도록 변경했습니다. 이어 말하려면 음성 버튼을 다시 누릅니다.
+- 모바일에서 별도 확정 결과로 들어오는 3단계 이상의 증가하는 접두 표현(예: 경쟁 → 경쟁입찰 → 경쟁입찰참가 → 경쟁입찰참가등록)을 마지막 표현으로 정리합니다. 일반적인 반복 단어 및 녹음 세션 사이의 반복은 유지합니다. 실제로 단계별 용어를 나열한 경우도 이 조건과 같으면 축약될 수 있으므로 최종 답안을 확인하세요.
+- 결과 이벤트의 현재 목록으로 답안을 재구성하여 이전 결과 인덱스가 남지 않게 했습니다. 모바일 누적 결과, 별도 녹음, 의도적 반복, 결과 교체의 회귀 테스트를 추가했습니다. 실기기 마이크는 별도 확인이 필요합니다.
+- `design-preview/index.html`은 최초 검토용 시안입니다. 실제 학습 데이터와 연결되지 않으며 배포 파일 목록에 포함하지 않습니다. 이후 승인된 방향을 실제 앱에 로컬 적용했습니다. 현재 검토 주소는 `http://127.0.0.1:4173/#home`이며 2026-10-09 사용자가 GitHub 업로드를 승인했습니다.
+- 디자인 참고: https://www.aicitybuilders.com/ 의 흰 배경, 큰 제목, 검정 버튼, Pretendard 계열 선언. 시안에는 OFL로 배포된 Pretendard Variable을 별도로 포함했습니다.
+- 최종 캐릭터 이름은 **아로(ARO)**입니다. 승인된 시안의 대표 캐릭터를 built-in image_gen으로 투명 배경 이미지 `assets/aro.png`로 제작했습니다. 기존 학과 로고는 그대로 유지합니다. 아로는 홈과 핵심이론, 빈칸 연습, 실전 문제, 답안 작성, 모의고사 안내에 표시합니다.
+- `modern.css`에 흰 배경, 검정 기본 버튼, 청색 보조 색상, 상단 탐색, 모바일 하단 탐색을 적용했습니다. `assets/fonts/PretendardVariable.woff2`를 사용하며 기존 글자 크기 선택을 유지합니다. 3개 글자 크기 × 4개 화면 폭 × 6개 화면, 음성 이벤트 회귀, 전체 240문항 경로 및 학습/모의고사/백업 테스트가 통과했습니다.
+- 생성 프롬프트는 `design-preview/character-prompt.txt`와 `design-preview/aro-production-prompt.txt`에 보관합니다.
+
 로고는 제공 이미지에서 built-in image_gen으로 고해상도 복원했습니다. 저장 위치는 `assets/department-logo.png`이며, 원본과 완전히 동일한 공식 벡터 파일을 의미하지는 않습니다. 로고 문구·색상·형상을 원본과 시각 대조했습니다.
 
 이미지 복원 프롬프트: “Faithful high resolution restoration of the attached existing Korean university department logo. Preserve exactly the geometric interlocking blue teal mint symbol on the left, the two lines of Korean lettering on the right, their proportions, positions and original colors. Text exactly '남서울대학교' on first line and 'AI공공조달학과' on second line. Plain pure white background. Reconstruct crisp smooth clean edges and legible typography from the small reference, no redesign, no new decoration, no extra text. Wide horizontal logo, tightly framed with only a small uniform white margin. Output a high resolution faithful reproduction, around 1500 px wide.”
@@ -137,3 +148,17 @@ python tests/check_content.py
 `npm run test:mobile`은 Playwright Chromium의 Pixel 7 모사 환경과 WebKit의 iPhone 13 / iPhone SE 모사 환경을 사용합니다. 실행 전에 `npx playwright install chromium webkit`으로 테스트 엔진을 설치합니다. 각 환경에서 주요 7개 화면 × 글자 크기 3단계 × 세로/가로 방향(42가지)의 가로 넘침, 하단 메뉴 터치 이동, 답안 저장·새로고침·채점, 모의고사 제출, 이론 목차와 실제 MP3 재생·일시정지·이어듣기를 확인합니다. `.qa/mobile/`에 화면과 결과를 저장합니다. 음성 선택창은 최소 16px로 표시합니다.
 
 이는 Windows에서 실행한 브라우저 엔진 및 모바일 화면 모사 검사입니다. 실제 Android Chrome이나 iOS Safari 앱을 직접 실행한 검사가 아니므로 OS 키보드, 마이크 권한·음성인식, 노치·홈 표시줄, 잠금/백그라운드 음성 재생은 실제 기기에서 별도 확인해야 합니다.
+
+### 아로 학습 안내 확대
+- 독서형(`assets/aro-reading.png`): 상단 로고 옆, 핵심이론, 홈의 이론 메뉴.
+- 체크리스트형(`assets/aro-department.png`): 홈 대표 캐릭터와 답안 작성 안내.
+- 전구형(`assets/aro-idea.png`): 홈의 모의고사 카드, 모의고사 시작 및 응시 안내.
+- 책상 필기형(`assets/aro-write.png`): 홈의 실전 문제 카드와 실전 문제 목록.
+- 응원형(`assets/aro-cheer-department.png`): 빈칸 연습, 제출 후 자기채점과 전체 결과, 홈의 빈칸 연습 메뉴.
+- 안내는 화면 흐름 안에 작게 배치하며 입력란이나 타이머를 덮지 않습니다. 모바일에서는 축소 표시합니다. 2026-10-09 사용자가 GitHub 업로드를 승인했습니다.
+- 응원형은 built-in image_gen으로 승인된 최초 시안의 오른쪽 아래 캐릭터를 투명 배경 단독 이미지로 제작했습니다. 프롬프트 요지: 해당 캐릭터의 윙크, 응원하는 주먹, 체크리스트, 학사모와 색상 및 비율을 보존하고 다른 캐릭터·문구·배경을 제거.
+
+### Q넷 공식 자료
+- 시험일정과 공고 링크는 Q넷 2026년 수시검정 제1회 시행공고를 기준으로 확인했습니다(2026-10-09).
+- `assets/docs/qnet-procurement-practical-criteria-2026-2028.pdf`는 Q넷 원본의 실기 부분인 11~18쪽을 내용 변경 없이 발췌했습니다. 적용기간은 2026.03.01~2028.12.31입니다.
+- 원본: https://www.q-net.or.kr/pageLink.do?link=cst/cstReport&jmCd=9777&mcrtrNo=1254

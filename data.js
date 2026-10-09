@@ -6682,12 +6682,12 @@ window.PROCUREMENT_DATA = {
   ],
   "sources": [
     {
-      "title": "조달청 시험공고 · 시험일·접수일",
-      "url": "https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=NOTICE&BO_IDX=6705&method=detail"
+      "title": "Q넷 시험공고 · 2026년 수시검정 제1회",
+      "url": "https://www.q-net.or.kr/man004.do?ARTL_SEQ=5249930&BOARD_ID=Q001&gSite=Q&id=man00402&notiType=10"
     },
     {
-      "title": "조달청 2026.10.08 교재·법령 적용 유의사항",
-      "url": "https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=NOTICE&BO_IDX=7127&method=detail"
+      "title": "Q넷 공공조달관리사 실기 출제기준 PDF (2026~2028)",
+      "url": "./assets/docs/qnet-procurement-practical-criteria-2026-2028.pdf"
     },
     {
       "title": "국가법령정보센터 · 적용 법령과 시행일 확인",

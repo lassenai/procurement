@@ -8,6 +8,22 @@
   function paint(listening){const b=document.querySelector('[data-voice-toggle]');if(b){b.setAttribute('aria-pressed',String(listening));b.querySelector('span').textContent=listening?'말하기 종료':'음성으로 답하기';}const input=document.querySelector('textarea[data-answer],textarea[data-exam-answer],textarea[data-blank-answer]');if(input&&!input.hasAttribute('data-submitted')){if(session?.input===input||!listening)input.readOnly=listening||!!input.dataset.locked;}}
   function cancel(){const s=session;if(!s)return;session=null;s.rec.onresult=null;s.rec.onend=null;s.rec.onerror=null;try{s.rec.abort();}catch(e){}if(s.input.isConnected)s.input.readOnly=false;}
   function available(){return window.SpeechRecognition||window.webkitSpeechRecognition;}
+  // Some mobile recognizers expose successive hypotheses as separate final
+  // results. Collapse only a growing prefix chain (3+ results), never ordinary
+  // repeated words, arbitrary overlaps, or text from a previous recording.
+  function recognitionText(parts){
+    const output=[];
+    for(let i=0;i<parts.length;){
+      let end=i+1,growing=false;
+      while(end<parts.length&&parts[end].startsWith(parts[end-1])){
+        growing ||= parts[end].length>parts[end-1].length;
+        end++;
+      }
+      if(end-i>=3&&growing){output.push(parts[end-1]);i=end;}
+      else {output.push(parts[i]);i++;}
+    }
+    return output.join(' ');
+  }
   function init(){applySize();const b=document.querySelector('[data-voice-toggle]');if(!b)return;if(!available()||!window.isSecureContext){b.disabled=true;b.querySelector('span').textContent='키보드 마이크로 답하기';message('이 브라우저에서는 직접 음성 입력을 지원하지 않습니다. 답안 칸을 누른 뒤 휴대폰 키보드의 마이크를 이용해 주세요.');}}
   function start(){
     if(session){session.stopping=true;message('말씀을 마무리하고 있습니다…');try{session.rec.stop();}catch(e){cancel();paint(false);}return;}
@@ -15,24 +31,29 @@
     if(!Ctor||!input||input.readOnly||!window.isSecureContext)return;
     let rec;try{rec=new Ctor();}catch(e){message('음성 입력을 시작할 수 없습니다. 키보드의 마이크를 이용해 주세요.');return;}
     const s={rec,input,base:input.value,finals:new Map(),error:false,stopping:false};session=s;
-    rec.lang='ko-KR';rec.continuous=true;rec.interimResults=true;
+    rec.lang='ko-KR';rec.continuous=false;rec.interimResults=true;
     paint(true);message('마이크를 연결하고 있습니다. 권한 요청을 확인해 주세요.');
-    rec.onstart=()=>{if(session===s)message('듣고 있습니다. 천천히 말씀하신 뒤 말하기 종료를 누르세요.');};
+    rec.onstart=()=>{if(session===s)message('듣고 있습니다. 한 문장씩 말씀하세요. 말이 끝나면 자동으로 마무리합니다.');};
     rec.onresult=event=>{
       if(session!==s||!input.isConnected)return;
-      let interim='';
+      const finals=[],interims=[];
       for(let i=0;i<event.results.length;i++){
         const result=event.results[i];
-        if(result.isFinal)s.finals.set(i,result[0].transcript.trim());
-        else interim+=result[0].transcript;
+        const transcript=result[0].transcript.trim();
+        if(!transcript)continue;
+        if(result.isFinal)finals.push([i,transcript]);
+        else interims.push(transcript);
       }
-      const text=[...s.finals.entries()].sort((a,b)=>a[0]-b[0]).map(x=>x[1]).join(' ');
+      // results is the current session snapshot; do not retain stale indices.
+      s.finals=new Map(finals);
+      const text=recognitionText(finals.map(x=>x[1]));
+      const interim=recognitionText(interims);
       const value=[s.base.trimEnd(),text].filter(Boolean).join('\n').slice(0,20000);
       if(text&&input.value!==value){input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));}
       const preview=document.querySelector('.voice-interim');if(preview)preview.textContent=interim?'인식 중: '+interim:'';
     };
     rec.onerror=e=>{if(session!==s)return;s.error=true;const messages={'not-allowed':'마이크 사용이 허용되지 않았습니다. 브라우저의 사이트 설정에서 마이크를 허용한 뒤 다시 눌러 주세요.','service-not-allowed':'이 브라우저의 음성 서비스가 허용되지 않았습니다. 다른 지원 브라우저 또는 키보드 마이크를 이용해 주세요.','audio-capture':'마이크를 찾을 수 없습니다. 연결과 다른 앱의 마이크 사용을 확인해 주세요.','network':'음성 서비스에 연결하지 못했습니다. 인터넷 연결을 확인하거나 키보드 마이크를 이용해 주세요.','no-speech':'음성을 듣지 못했습니다. 버튼을 눌러 다시 말씀해 주세요.','aborted':'음성 입력을 중지했습니다.'};message(messages[e.error]||'음성 인식을 완료하지 못했습니다. 다시 시도하거나 키보드 마이크를 이용해 주세요.');};
-    rec.onend=()=>{if(session!==s)return;session=null;input.readOnly=false;paint(false);const preview=document.querySelector('.voice-interim');if(preview)preview.textContent='';if(!s.error)message(s.finals.size?'음성을 답안에 적었습니다. 내용을 확인한 뒤 답안을 비교하세요.':'인식된 답안이 없습니다. 버튼을 눌러 다시 말씀해 주세요.');};
+    rec.onend=()=>{if(session!==s)return;session=null;input.readOnly=false;paint(false);const preview=document.querySelector('.voice-interim');if(preview)preview.textContent='';if(!s.error)message(s.finals.size?'음성을 답안에 적었습니다. 더 말하려면 음성으로 답하기를 다시 누르세요. 내용을 확인한 뒤 답안을 비교하세요.':'인식된 답안이 없습니다. 버튼을 눌러 다시 말씀해 주세요.');};
     try{rec.start();}catch(e){cancel();paint(false);message('마이크를 시작하지 못했습니다. 권한을 확인하거나 키보드 마이크를 이용해 주세요.');}
   }
   document.addEventListener('click',e=>{

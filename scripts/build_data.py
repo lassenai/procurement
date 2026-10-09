@@ -12,8 +12,8 @@ TEXTBOOK = ['제1장, PDF 7~62쪽','제2~3장, PDF 65~138쪽','제4장, PDF 141~
 ACADEMY = ['핵심이론 PDF 1~21쪽','핵심이론 PDF 22~63쪽','핵심이론 PDF 64~97쪽','핵심이론 PDF 98~132쪽 / 5주차 / 6주차 연습문제','핵심이론 PDF 133~181쪽 / 5주차','핵심이론 PDF 182~196쪽 / 6주차 PDF 1~13쪽','핵심이론 PDF 197~213쪽 / 7주차','핵심이론 PDF 214~221쪽 / 7주차']
 DESCRIPTIONS = ['자격·직접생산·등록·목록화','수요 분석·경제성·공급계획','제안서·평가·가격·협상','체결·보증·선금·조정·종결','물품·용역·공사·MAS·하도급','식별·평가·대응·모니터링','적용 법령·분쟁·우대제도','전자업무·정보보호·데이터 해석']
 PUBLIC_SOURCES = [
- {'title':'조달청 시험공고 · 시험일·접수일','url':'https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=NOTICE&BO_IDX=6705&method=detail'},
- {'title':'조달청 2026.10.08 교재·법령 적용 유의사항','url':'https://www.pps.go.kr/hrd/home/UserBoardActionUpdate.do?BO_CODE=NOTICE&BO_IDX=7127&method=detail'},
+ {'title':'Q넷 시험공고 · 2026년 수시검정 제1회','url':'https://www.q-net.or.kr/man004.do?ARTL_SEQ=5249930&BOARD_ID=Q001&gSite=Q&id=man00402&notiType=10'},
+ {'title':'Q넷 공공조달관리사 실기 출제기준 PDF (2026~2028)','url':'./assets/docs/qnet-procurement-practical-criteria-2026-2028.pdf'},
  {'title':'국가법령정보센터 · 적용 법령과 시행일 확인','url':'https://www.law.go.kr/'},
  {'title':'ISO 31000 · 위험관리 공식 안내','url':'https://www.iso.org/standards/popular/iso-31000-family'},
  {'title':'나라장터','url':'https://www.g2b.go.kr/'},

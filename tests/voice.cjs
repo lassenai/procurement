@@ -24,6 +24,26 @@ const base=process.env.BASE_URL||'http://127.0.0.1:4173/';
  await p.locator('[data-voice-toggle]').click();await p.evaluate(()=>{testRec.emit([['경쟁입찰참가자격등록',true],['자격을 확인한다',true]]);testRec.onend?.();});
  assert.equal(await p.locator('#answer').inputValue(),'기존 답안\n경쟁입찰참가자격등록 자격을 확인한다');assert.equal(await p.locator('#answer').getAttribute('readonly'),null);
  await p.reload();assert.match(await p.locator('#answer').inputValue(),/자격을 확인한다/);console.log('PASS: interim, final, no duplicates, append, late final after stop, persistence');
+ // Android-style final hypotheses at new indices must not accumulate.
+ await p.locator('#answer').fill('기존 답안');await p.locator('[data-voice-toggle]').click();
+ assert.equal(await p.evaluate(()=>testRec.continuous),false);
+ const hypotheses=['경쟁','경쟁','경쟁','경쟁입찰','경쟁입찰참가','경쟁입찰참가등록'];
+ for(let n=1;n<=hypotheses.length;n++)await p.evaluate(parts=>testRec.emit(parts.map(t=>[t,true])),hypotheses.slice(0,n));
+ assert.equal(await p.locator('#answer').inputValue(),'기존 답안\n경쟁입찰참가등록');
+ await p.evaluate(()=>testRec.onend?.());
+ // A new recording is allowed to repeat the preceding answer verbatim.
+ await p.locator('[data-voice-toggle]').click();await p.evaluate(()=>{testRec.emit([['경쟁입찰참가등록',true]]);testRec.onend?.();});
+ assert.equal(await p.locator('#answer').inputValue(),'기존 답안\n경쟁입찰참가등록\n경쟁입찰참가등록');
+ // Preserve intentional repetitions and distinct clauses with shared words.
+ await p.locator('#answer').fill('');await p.locator('[data-voice-toggle]').click();
+ await p.evaluate(()=>testRec.emit([['확인',true],['확인',true],['확인',true],['등록 후 확인',true]]));
+ assert.equal(await p.locator('#answer').inputValue(),'확인 확인 확인 등록 후 확인');
+ // Replaced snapshots must not leave old final entries in the answer.
+ await p.evaluate(()=>testRec.emit([['수정된 답안',true]]));
+ assert.equal(await p.locator('#answer').inputValue(),'수정된 답안');
+ await p.evaluate(()=>testRec.onend?.());await p.reload();
+ assert.equal(await p.locator('#answer').inputValue(),'수정된 답안');
+ console.log('PASS: mobile cumulative hypotheses, separate recordings, intentional repeats, snapshot replacement');
  await p.locator('[data-voice-toggle]').click();await p.evaluate(()=>{testRec.onerror?.({error:'not-allowed'});testRec.onend?.();});assert.match(await p.locator('.voice-status').innerText(),/허용되지/);assert.equal(await p.locator('#answer').getAttribute('readonly'),null);
  await p.locator('[data-voice-toggle]').click();await p.evaluate(()=>{window.oldRec=testRec;window.late=testRec.onresult;});await p.locator('[data-go="q/Q002"]').click();await p.locator('[data-answer="Q002"]').waitFor();assert.equal(await p.evaluate(()=>oldRec.aborted),true);await p.evaluate(()=>late({results:[Object.assign([{transcript:'잘못된 문항 입력'}],{isFinal:true})]}));assert.equal(await p.locator('#answer').inputValue(),'');console.log('PASS: permission errors and navigation cancel isolation');
  for(const size of ['18','20','22']){
@@ -34,10 +54,14 @@ const base=process.env.BASE_URL||'http://127.0.0.1:4173/';
    for(const route of ['home','q/Q002','theory/6','practice','mocks','settings']){
     await p.goto(base+'#'+route);await p.waitForLoadState('networkidle');
     assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,route+' '+size+' '+width);
-    assert(!/학원|첨부 출제기준|출제기준 PDF/.test(await p.locator('#main').innerText()));
+    assert(!/학원|첨부 출제기준/.test(await p.locator('#main').innerText()));
    }
   }
  }
+ const criteriaLink=p.getByRole('link',{name:'Q넷 공공조달관리사 실기 출제기준 PDF (2026~2028)',exact:true});
+ assert.equal(await criteriaLink.getAttribute('href'),'./assets/docs/qnet-procurement-practical-criteria-2026-2028.pdf');
+ const criteriaResponse=await p.request.get(new URL(await criteriaLink.getAttribute('href'),base).href);
+ assert.equal(criteriaResponse.status(),200);assert.equal((await criteriaResponse.body()).subarray(0,5).toString(),'%PDF-');
  await p.reload();assert.equal(await p.evaluate(()=>getComputedStyle(document.documentElement).fontSize),'22px');console.log('PASS: 3 font sizes x 4 widths x 6 screens, preference restore and source labels');
  await p.setViewportSize({width:390,height:844});await p.goto(base+'#theory/1');await p.locator('[data-font="18"]').click();await p.evaluate(()=>document.fonts.ready);await p.screenshot({path:path.resolve('.qa/new-mobile-theory.png'),fullPage:true});
  await p.goto(base+'#q/Q002');await p.screenshot({path:path.resolve('.qa/new-mobile-voice.png'),fullPage:true});

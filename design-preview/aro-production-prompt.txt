@@ -1,0 +1,5 @@
+Tool: built-in image_gen, transparent_background=true.
+Input: design-preview/jodali-concept.png (approved character reference).
+Output copied to: assets/aro.png. Original department logo was not changed.
+
+Edit the supplied approved mascot concept sheet into ONE clean production website mascot cutout. Preserve exactly the identity, proportions, ivory body, navy face, bright blue happy eyes, navy graduation cap and navy jacket of the large waving robot on the LEFT. Keep its waving pose and procurement checklist in the other hand. Remove all text including the former name, remove the two smaller right-hand poses, remove background. One single full-body character centered, fully visible cap and feet, soft matte premium 3D quality, genuinely transparent background, no text or border. This character is now named ARO but DO NOT write any name in the image. Tight but comfortable bounding space around one character.
