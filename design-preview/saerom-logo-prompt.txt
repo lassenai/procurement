@@ -1,0 +1,4 @@
+Mode: built-in image_gen; transparent background.
+Source: user-provided Saerom logo.
+Prompt: Faithfully restore and upscale the existing logo, not redesign. Preserve crimson K, small black 김포 above 검단, black 새롬박 and 각, white 문 in crimson angled door; preserve layout and typography; crisp edges, actual transparent alpha, horizontal composition, minimal padding, no shadows or extra text.
+Output: assets/saerom-pag-transparent.png (1916 x 821 RGBA).

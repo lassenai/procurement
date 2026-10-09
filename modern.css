@@ -100,3 +100,14 @@ h1,h2,h3{font-weight:750}button{border-radius:6px}button.primary{background:var(
 .supplement-body{padding:8px 22px 20px}.theory-body .supplement-body p{font-size:.9rem;line-height:1.9;max-width:none}
 .supplement-table-wrap{overflow-x:auto;margin:18px 0}.supplement-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:.83rem;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}.supplement-table caption{text-align:left;font-weight:600;margin-bottom:10px;color:#213544}.supplement-table th,.supplement-table td{padding:12px 10px;text-align:left;border-bottom:1px solid #dce5e7;vertical-align:top}.supplement-table thead{background:#f4f7fa}.supplement-table th{font-weight:600}.supplement-table th:first-child{width:24%}.supplement-body h4{font-size:.92rem;margin:24px 0 10px}.supplement-body ol{padding-left:23px;font-size:.9rem;line-height:1.9}.supplement-body li{margin:9px 0}.supplement-practice{padding:1px 18px 16px;background:#f5f7fd;border-radius:6px;margin:22px 0}.supplement-solution summary{cursor:pointer;color:#185862;font-size:.86rem;font-weight:600;padding:8px 0}.supplement-note{border-left:3px solid #94b5b5;padding-left:12px;color:#526871}.theory-body .supplement-reading-note{font-size:.73rem;color:#667e85}.theory-body .supplement-body .lesson-reference{font-size:.76rem}
 @media(max-width:760px){.theory-supplement>summary{padding:14px 12px}.theory-supplement>summary>strong{display:block;margin-top:5px}.supplement-body{padding:5px 12px 15px}.supplement-table{font-size:.76rem}.supplement-table th,.supplement-table td{padding:10px 5px}.supplement-practice{padding:1px 12px 12px}.supplement-tag{margin-left:5px}}
+
+/* University and Saerom wordmarks: local approval preview. */
+.sidebar{max-width:1440px;gap:24px}
+.brand{flex:0 0 494px;width:494px;max-width:494px;gap:12px}
+.brand .department-logo{width:218px;flex:0 0 218px}
+.brand-divider{display:block;width:1px;flex:0 0 1px;height:38px;background:#d9e1e8}
+.partner-logo{display:block;width:173px;flex:0 0 173px;line-height:0}
+.partner-logo img{display:block;width:100%;height:auto}
+.brand-aro{width:66px;flex:0 0 66px;height:68px}
+@media(min-width:761px) and (max-width:1280px){.sidebar{flex-wrap:wrap;justify-content:center;gap:5px;padding:14px 24px}.sidebar>.nav{width:100%;justify-content:center;flex-wrap:wrap}}
+@media(max-width:760px){.sidebar{padding:12px 16px}.brand{flex:0 1 auto;width:auto;max-width:100%;gap:8px}.brand .department-logo{width:clamp(120px,36vw,190px);flex:0 0 auto}.brand-divider{height:28px}.partner-logo{width:clamp(94px,26vw,142px);flex:0 0 auto}.brand-aro{width:38px;flex:0 0 38px;height:45px}}
