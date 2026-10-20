@@ -324,3 +324,32 @@
   setInterval(()=>{updateExamCountdown();if(expire()){render();toast('150분이 종료되어 저장된 답안을 제출했습니다.');return;}const m=runningExam();if(m&&$('#timer')){$('#timer').textContent=timeLeft(state.exams[m.id]);$('#timer').classList.toggle('urgent',state.exams[m.id].deadline-Date.now()<300000);}},1000);
   render();
 })();
+/* Admissions notice is outside the routed app so navigation does not reopen it. */
+(() => {
+  const key = 'procurement-admissions-2027-hidden-date';
+  const today = () => new Intl.DateTimeFormat('sv-SE', {timeZone:'Asia/Seoul'}).format(new Date());
+  const preview = new URLSearchParams(location.search).get('preview') === 'admissions';
+  try { if (!preview && localStorage.getItem(key) === today()) return; } catch (_) {}
+  // Consecutive Korean calendar days alternate A/B, including month boundaries.
+  // 2026-10-20 is A; all visitors see the same poster on the same Korean date.
+  const dayOffset = Math.round((Date.parse(today() + 'T00:00:00Z') - Date.UTC(2026, 9, 20)) / 86400000);
+  const variant = ((dayOffset % 2) + 2) % 2 === 0 ? 'a' : 'b';
+  const poster = `./assets/admissions-2027-${variant}.png`;
+  const dialog = document.createElement('dialog');
+  dialog.className = 'admissions-dialog';
+  dialog.setAttribute('aria-labelledby', 'admissions-title');
+  dialog.innerHTML = `<header class="admissions-heading"><div><span>남서울대학교 대학원</span><h2 id="admissions-title">AI공공조달학과 대학원생 모집</h2></div><button type="button" class="admissions-close" aria-label="모집 안내 닫기" autofocus>×</button></header><div class="admissions-scroll" tabindex="0" aria-label="모집 포스터, 아래로 스크롤하여 전체 내용 보기"><img src="${poster}" alt="2027학년도 1학기 남서울대학교 대학원 AI공공조달학과 대학원생 모집. 공공조달학석사, 주야간·휴일 강의와 온라인 병행. 사전접수 2026년 10월 20일부터 11월 15일까지. 접수 이메일 kigon@nsu.ac.kr. 장학금 전원 지급 30~100%, 세부 조건은 학과 문의."></div><footer class="admissions-footer"><label><input type="checkbox" id="admissions-hide"> 오늘 하루 보지 않기</label><a href="${poster}" target="_blank" rel="noopener">원본 크게 보기 ↗</a><button type="button" class="admissions-done">닫기</button></footer>`;
+  document.body.append(dialog);
+  const close = () => dialog.close();
+  dialog.querySelector('.admissions-close').addEventListener('click', close);
+  dialog.querySelector('.admissions-done').addEventListener('click', close);
+  dialog.addEventListener('click', event => { if(event.target === dialog) { const r=dialog.getBoundingClientRect(); if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom) close(); } });
+  dialog.addEventListener('close', () => {
+    if (dialog.querySelector('#admissions-hide').checked) { try { localStorage.setItem(key, today()); } catch (_) {} }
+    document.body.classList.remove('admissions-open');
+    document.querySelector('.brand')?.focus({preventScroll:true});
+    dialog.remove();
+  });
+  dialog.showModal();
+  document.body.classList.add('admissions-open');
+})();
