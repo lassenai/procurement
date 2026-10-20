@@ -334,7 +334,7 @@
   // 2026-10-20 is A; all visitors see the same poster on the same Korean date.
   const dayOffset = Math.round((Date.parse(today() + 'T00:00:00Z') - Date.UTC(2026, 9, 20)) / 86400000);
   const variant = ((dayOffset % 2) + 2) % 2 === 0 ? 'a' : 'b';
-  const poster = `./assets/admissions-2027-${variant}.png`;
+  const poster = `./assets/admissions-2027-${variant}.png?v=20261020-2`;
   const dialog = document.createElement('dialog');
   dialog.className = 'admissions-dialog';
   dialog.setAttribute('aria-labelledby', 'admissions-title');
